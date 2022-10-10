@@ -1,7 +1,7 @@
 import { findAllByTestId } from '@testing-library/react';
 import React, { Component } from 'react';
 import ReactDOM, { hydrateRoot } from 'react-dom/client';
-
+import "./components/app";
 
 
 
