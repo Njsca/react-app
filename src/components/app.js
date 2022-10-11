@@ -30,11 +30,10 @@ class App extends Component {
   //   });
   // }
 
-
   search(query) {
     const giphEndpoint = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${query}&limit=10`
     fetch(giphEndpoint).then(response => response.json()).then((data) => {
-      const gifs = data.data.map(giph => giph.id)
+      const gifs = data.data
       this.setState({
         gifs: gifs
       })
@@ -52,6 +51,7 @@ class App extends Component {
       <div>
         <div className="left-scene">
           <SearchBar searchFunction={this.search}/>
+          <h2>Enter a keyword and look for a gif</h2>
           <div className="selected-gif" >
             <Gif id={this.state.selectedGifId}/>
           </div>
