@@ -5,6 +5,4 @@ import App from "./components/app";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-if (root) {
-  root.render(<App/>);
-}
+if (root) { root.render(<App/>); }
